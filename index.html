@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FormPage</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="selectHandler.js"></script>
+
+    <style type="text/css">
+
+        .header {
+            margin-left: 30px;
+            margin-top: 30px;
+            width: 1000px;
+            align-content: center;
+        }
+
+
+        .field {
+            clear:both;
+            text-align:right;
+            line-height:25px;
+            width: 700px;
+            float:left;
+        }
+        .textQuestion {
+            margin-left: 30px;
+            margin-top: 30px;
+            font-weight:bold;
+            font-size:14px;
+        }
+
+        .addListItemClass{
+            margin-left: 30px;
+            margin-top: 30px;
+        }
+
+        .removeListItem{
+            margin-left: 30px;
+            margin-top: 30px;
+        }
+
+        form {
+            counter-reset: listField-counter;
+        }
+
+        i:before {
+            content: counter(listField-counter) ". ";
+        }
+
+        .listItemDiv {
+             counter-increment: listField-counter;
+        }
+
+        .listDiv {
+            margin-left: 15px;
+        }
+
+        label {
+            float:left;
+            padding-right:10px;
+            font-family:'Times New Roman', Times, serif;
+            font-weight:bold;
+            font-size:18px;
+        }
+
+        .listField{
+            width : 800px;
+        }
+
+        .addNew{
+            margin-left: 20px;
+            margin-top: 2px;
+            float:left;
+        }
+
+        .main{
+            margin:auto;
+            background-color: lightslategrey ;
+            position: absolute;
+            left: 25%; top: 0;
+            width: 1100px;
+            min-height: 100%;
+            height: auto !important;
+
+        }
+
+    </style>
+</head>
+<body>
+
+
+
+<div class="main" id="main">
+
+
+<div class="header" id="header">
+    <div class="field">
+        <label for="NewForm">Form Name</label>
+        <input name="name" placeholder="New Form" id="NewForm" size="80"/>
+    </div>
+    <div class="field">
+        <label for="NewDescription">Description</label>
+        <input name="description" placeholder="New Description" id="NewDescription" size="80"/>
+
+    </div>
+</div>
+
+
+<div class ="addNew">
+    <button id="addNew" onclick="addNewForm()" >Create New</button>
+
+</div>
+</div>
+
+
+<script id="dm" type="text/template">
+    <select class="dropClass">
+        <option value="1">String</option>
+        <option value="2">One From List</option>
+        <option value="3">Drop Down List</option>
+    </select>
+</script>
+
+
+<script id="list" type="text/template">
+    <div id="addListItem" class="addListItemClass">
+        <br>
+        <div class="listDiv">
+            <input type="button" addNewFiled="addNewFiled" value="Add New List Item" id="add" onclick="">
+        </div>
+    </div>
+</script>
+
+</body>
+</html>
+
+
